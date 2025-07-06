@@ -12,6 +12,6 @@ def sum_of_squares():
     result = graph.invoke({"length": length})
     return jsonify(sum_of_squares=result["sum_of_squares"])
 
-if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 5001))
-    app.run(port=port, host="0.0.0.0")
+# if __name__ == "__main__":
+#     port = int(os.environ.get("PORT", 5001))
+#     app.run(port=port, host="0.0.0.0")

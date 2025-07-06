@@ -12,3 +12,9 @@
 [2025-07-06T15:48:11.793+0000] {base.py:73} INFO - Using connection ID 'noaa_http' for task execution.
 [2025-07-06T15:48:11.793+0000] {logging_mixin.py:151} INFO - Downloading from: https://www.ncei.noaa.gov//pub/data/ghcn/daily/by_year/2020.csv.gz
 [2025-07-06T15:48:11.796+0000] {base.py:73} INFO - Using connection ID 'noaa_http' for task execution.
+[2025-07-06T16:07:55.180+0000] {local_task_job_runner.py:294} WARNING - State of this instance has been externally set to failed. Terminating instance.
+[2025-07-06T16:07:55.214+0000] {process_utils.py:131} INFO - Sending 15 to group 528. PIDs of all processes in the group: [528]
+[2025-07-06T16:07:55.215+0000] {process_utils.py:86} INFO - Sending the signal 15 to group 528
+[2025-07-06T16:07:55.216+0000] {taskinstance.py:1630} ERROR - Received SIGTERM. Terminating subprocesses.
+[2025-07-06T16:07:55.293+0000] {logging_mixin.py:151} INFO - Error downloading 2020.csv.gz: Task received SIGTERM signal
+[2025-07-06T16:07:55.408+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=528, status='terminated', exitcode=0, started='15:48:11') (528) terminated with exit code 0
