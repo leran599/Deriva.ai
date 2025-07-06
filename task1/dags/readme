@@ -1,2 +1,0 @@
-run  "docker compose up --build" ro build and star the container 
-run "docker exec task1-airflow-1 airflow dags trigger weather_data_pipeline" to trigger the dag

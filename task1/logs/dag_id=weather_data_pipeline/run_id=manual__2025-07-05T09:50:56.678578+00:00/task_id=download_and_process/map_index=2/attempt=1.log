@@ -1,1 +1,0 @@
-[2025-07-05T11:41:42.106+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: weather_data_pipeline.download_and_process manual__2025-07-05T09:50:56.678578+00:00 map_index=2 [queued]>
