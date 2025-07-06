@@ -1,0 +1,19 @@
+{
+  "file_name": "2022.csv.gz",
+  "processed_at": "2025-07-06T12:35:08.132035",
+  "total_records": 37809302,
+  "unique_stations": 43530,
+  "date_range": {
+    "start": "2022-01-01",
+    "end": "2022-12-31"
+  },
+  "measurement_counts": {
+    "PRCP": 11105580,
+    "TMAX": 4434842,
+    "TMIN": 4395554
+  },
+  "temperature_stats": {
+    "avg_max_c": 16.886328216428005,
+    "avg_min_c": 5.1332248449228475
+  }
+}

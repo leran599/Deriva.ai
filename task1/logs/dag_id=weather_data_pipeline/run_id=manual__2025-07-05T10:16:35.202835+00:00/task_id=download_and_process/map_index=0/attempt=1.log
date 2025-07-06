@@ -1,0 +1,605 @@
+[2025-07-05T10:16:38.729+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: weather_data_pipeline.download_and_process manual__2025-07-05T10:16:35.202835+00:00 map_index=0 [queued]>
+[2025-07-05T10:16:38.735+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: weather_data_pipeline.download_and_process manual__2025-07-05T10:16:35.202835+00:00 map_index=0 [queued]>
+[2025-07-05T10:16:38.735+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 2
+[2025-07-05T10:16:38.742+0000] {taskinstance.py:1380} INFO - Executing <Mapped(_PythonDecoratedOperator): download_and_process> on 2025-07-05 10:16:35.202835+00:00
+[2025-07-05T10:16:38.745+0000] {standard_task_runner.py:57} INFO - Started process 736 to run task
+[2025-07-05T10:16:38.748+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'weather_data_pipeline', 'download_and_process', 'manual__2025-07-05T10:16:35.202835+00:00', '--job-id', '17', '--raw', '--subdir', 'DAGS_FOLDER/weather_data_pipeline.py', '--cfg-path', '/tmp/tmpgdbqt0zz', '--map-index', '0']
+[2025-07-05T10:16:38.750+0000] {standard_task_runner.py:85} INFO - Job 17: Subtask download_and_process
+[2025-07-05T10:16:38.761+0000] {logging_mixin.py:151} WARNING - /home/***/.local/lib/python3.8/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-07-05T10:16:38.786+0000] {task_command.py:415} INFO - Running <TaskInstance: weather_data_pipeline.download_and_process manual__2025-07-05T10:16:35.202835+00:00 map_index=0 [running]> on host 50a81e38c03c
+[2025-07-05T10:16:38.986+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='weather_data_pipeline' AIRFLOW_CTX_TASK_ID='download_and_process' AIRFLOW_CTX_EXECUTION_DATE='2025-07-05T10:16:35.202835+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-07-05T10:16:35.202835+00:00'
+[2025-07-05T10:16:38.990+0000] {base.py:73} INFO - Using connection ID 'noaa_http' for task execution.
+[2025-07-05T10:16:40.228+0000] {http.py:178} ERROR - HTTP error: Not Found
+[2025-07-05T10:16:40.229+0000] {http.py:179} ERROR - <!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+  <head>
+            <meta charset="utf-8" />
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E1Q1BML6E5"></script>
+<script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments)};gtag("js", new Date());gtag("set", "developer_id.dMDhkMT", true);ga("set", "hostname", "ncei.noaa.gov");gtag("config", "G-E1Q1BML6E5", {"groups":"default","link_attribution":true,"allow_ad_personalization_signals":false,"page_location":"/404.html?page=" + document.location.pathname + document.location.search + "&from=" + document.referrer});</script>
+<meta name="description" content="We apologize, but the page or resource for which you were searching does not exist. Please try the following Check the URL for spelling errors or typos Review old bookmarks for the page Go back to the homepage Go to the contact page Or, view our site map" />
+<meta name="keywords" content="climate,data,observations,weather,coasts,oceans,geophysics,satellites" />
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate" />
+<meta name="generator" content="Drupal 8 (http://drupal.org)" />
+<link rel="icon" href="https://www.ncei.noaa.gov/themes/custom/ncei/favicon.ico" />
+<meta property="og:site_name" content="National Centers for Environmental Information (NCEI)" />
+<meta property="og:type" content="page" />
+<meta property="og:title" content="Page or Resource Not Found (404 Error) | National Centers for Environmental Information (NCEI)" />
+<meta property="og:description" content="We apologize, but the page or resource for which you were searching does not exist. Please try the following Check the URL for spelling errors or typos Review old bookmarks for the page Go back to the homepage Go to the contact page Or, view our site map" />
+<meta property="og:updated_time" content="2018-08-11T01:53:06-0400" />
+<meta property="article:published_time" content="2015-07-30T13:28:33-0400" />
+<meta property="article:modified_time" content="2018-08-11T01:53:06-0400" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:description" content="We apologize, but the page or resource for which you were searching does not exist. Please try the following Check the URL for spelling errors or typos Review old bookmarks for the page Go back to the homepage Go to the contact page Or, view our site map" />
+<meta name="twitter:title" content="Page or Resource Not Found (404 Error)" />
+<meta name="twitter:image:alt" content="We apologize, but the page or resource for which you were searching does not exist. Please try the following Check the URL for spelling errors or typos Review old bookmarks for the page Go back to the homepage Go to the contact page Or, view our site map" />
+<link name="pullquote_css" rel="stylesheet" type="text/css" href="/modules/custom/pullquote/css/pullquote_style_1.css" />
+<meta name="Generator" content="Drupal 10 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="canonical" href="https://www.ncei.noaa.gov/404" />
+<link rel="shortlink" href="https://www.ncei.noaa.gov/node/35" />
+<script>window.a2a_config=window.a2a_config||{};a2a_config.callbacks=[];a2a_config.overlays=[];a2a_config.templates={};
+</script>
+
+    <title>Page or Resource Not Found (404 Error) | National Centers for Environmental Information (NCEI)</title>
+    <link rel="stylesheet" media="all" href="/themes/contrib/stable/css/system/components/align.module.css?syu3co" />
+<link rel="stylesheet" media="all" href="/themes/contrib/stable/css/system/components/fieldgroup.module.css?syu3co" />
+<link rel="stylesheet" media="all" href="/themes/contrib/stable/css/system/components/container-inline.module.css?syu3co" />
+<link rel="stylesheet" media="all" href="/themes/contrib/stable/css/system/components/clearfix.module.css?syu3co" />
+<link rel="stylesheet" media="all" href="/themes/contrib/stable/css/system/components/details.module.css?syu3co" />
+<link rel="stylesheet" media="all" href="/themes/contrib/stable/css/system/components/hidden.module.css?syu3co" />
+<link rel="stylesheet" media="all" href="/themes/contrib/stable/css/system/components/item-list.module.css?syu3co" />
+<link rel="stylesheet" media="all" href="/themes/contrib/stable/css/system/components/js.module.css?syu3co" />
+<link rel="stylesheet" media="all" href="/themes/contrib/stable/css/system/components/nowrap.module.css?syu3co" />
+<link rel="stylesheet" media="all" href="/themes/contrib/stable/css/system/components/position-container.module.css?syu3co" />
+<link rel="stylesheet" media="all" href="/themes/contrib/stable/css/system/components/reset-appearance.module.css?syu3co" />
+<link rel="stylesheet" media="all" href="/themes/contrib/stable/css/system/components/resize.module.css?syu3co" />
+<link rel="stylesheet" media="all" href="/themes/contrib/stable/css/system/components/system-status-counter.css?syu3co" />
+<link rel="stylesheet" media="all" href="/themes/contrib/stable/css/system/components/system-status-report-counters.css?syu3co" />
+<link rel="stylesheet" media="all" href="/themes/contrib/stable/css/system/components/system-status-report-general-info.css?syu3co" />
+<link rel="stylesheet" media="all" href="/themes/contrib/stable/css/system/components/tablesort.module.css?syu3co" />
+<link rel="stylesheet" media="all" href="/themes/contrib/stable/css/views/views.module.css?syu3co" />
+<link rel="stylesheet" media="all" href="/modules/contrib/addtoany/css/addtoany.css?syu3co" />
+<link rel="stylesheet" media="all" href="/modules/contrib/back_to_top/css/back_to_top.css?syu3co" />
+<link rel="stylesheet" media="all" href="/modules/contrib/extlink/css/extlink.css?syu3co" />
+<link rel="stylesheet" media="all" href="/libraries/uswds/css/uswds.min.css?syu3co" />
+<link rel="stylesheet" media="all" href="/themes/custom/ncei/dist/style.css?syu3co" />
+
+    
+          </head>
+  <body class="path-https-wwwnceinoaagov-pub-data-ghcn-daily-by-year-2020csvgz path-https page-node-type-page">
+    <a href="#main-content" class="visually-hidden focusable">Skip to main content</a>
+    
+          <div class="container-fluid main" >
+
+    <section class="usa-banner">
+     
+ <div class="usa-banner">
+  <div class="usa-accordion">
+    <header class="usa-banner__header">
+      <div class="usa-banner__inner">
+        <div class="grid-col-auto">
+          <img class="usa-banner__header-flag" src="/libraries/uswds/img/us_flag_small.png" width="16px" height="10px" alt="U.S. flag">
+        </div>
+        <div class="grid-col-fill tablet:grid-col-auto">
+          <p class="usa-banner__header-text">An official website of the United States government</p>
+          <p class="usa-banner__header-action" aria-hidden="true">Here's how you know</p>
+        </div>
+        <button class="usa-accordion__button usa-banner__button" aria-expanded="false" aria-controls="gov-banner">
+          <span class="usa-banner__button-text">Here's how you know</span>
+        </button>
+      </div>
+    </header>
+    <div class="usa-banner__content usa-accordion__content" id="gov-banner" hidden="">
+      <div class="grid-row grid-gap-lg">
+        <div class="usa-banner__guidance tablet:grid-col-6">
+          <img class="usa-banner__icon usa-media-block__img" src="/libraries/uswds/img/icon-dot-gov.svg" alt="Dot gov">
+          <div class="usa-media-block__body">
+            <p>
+              <strong>The .gov means it’s official.</strong>
+              <br>
+              Federal government websites often end in .gov or .mil. Before sharing sensitive information, make sure you’re on a federal government site.
+            </p>
+          </div>
+        </div>
+        <div class="usa-banner__guidance tablet:grid-col-6">
+          <img class="usa-banner__icon usa-media-block__img" src="/libraries/uswds/img/icon-https.svg" alt="Https">
+          <div class="usa-media-block__body">
+            <p>
+              <strong>The site is secure.</strong>
+              <br>
+              The <strong>https://</strong> ensures that you are connecting to the official website and that any information you provide is encrypted and transmitted securely.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </section>
+  
+      <header role="banner">
+	<a name="pagetop"></a>
+
+  <nav class="navbar navbar-expand-sm navbar-dark header-dark container-fluid flex-row">
+    <div class="container">
+      <div class="system-branding">
+        <a href="/" class="branding" rel="home">
+          <img src="/themes/custom/ncei/logo.svg" class="logo" id="ncei-logo" title="National Centers for Environmental Information logo" alt="National Centers for Environmental Information logo"/>
+        </a>
+      </div>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+        <!--<span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon"></span>-->
+        <span class="mobilemenubutton">MENU</span>
+      </button>
+    </div>
+  </nav>
+  <nav class="navbar navbar-expand-sm navbar-dark header-dark container-fluid">
+    <div class="container">
+          <nav role="navigation" aria-labelledby="block-ncei-main-menu-menu" id="block-ncei-main-menu" class="block block-menu navigation menu--main navbar navbar-expand-lg">
+
+          
+    
+        
+<div class="collapse navbar-collapse order-1 order-md-0" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+        <a href="/" class="nav-link" data-drupal-link-system-path="&lt;front&gt;">Home</a>
+              </li>
+          <li class="nav-item">
+        <a href="/products" class="nav-link" data-drupal-link-system-path="products">Products</a>
+                                <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+        <a href="/search/content" title="Search and filter content on the site" class="nav-link" data-drupal-link-system-path="search/content">Search/Filter</a>
+              </li>
+        </ul>
+  
+              </li>
+          <li class="nav-item">
+        <a href="/services" class="nav-link" data-drupal-link-system-path="node/618">Services</a>
+                                <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+        <a href="/access" class="nav-link" data-drupal-link-system-path="node/723">Access</a>
+              </li>
+          <li class="nav-item">
+        <a href="/archive" class="nav-link" data-drupal-link-system-path="node/724">Archive</a>
+              </li>
+          <li class="nav-item">
+        <a href="/services/certification" class="nav-link" data-drupal-link-system-path="node/5761">Data Certification</a>
+              </li>
+          <li class="nav-item">
+        <a href="/maps-and-geospatial-products" class="nav-link" data-drupal-link-system-path="node/469">Maps</a>
+              </li>
+          <li class="nav-item">
+        <a href="https://www.ncei.noaa.gov/access/monitoring/products/" class="nav-link">Monitoring</a>
+              </li>
+          <li class="nav-item">
+        <a href="/online-store" class="nav-link" data-drupal-link-system-path="node/1833">Online Store</a>
+              </li>
+          <li class="nav-item">
+        <a href="/regional" class="nav-link" data-drupal-link-system-path="node/3611">Regional</a>
+              </li>
+          <li class="nav-item">
+        <a href="/services/state-of-the-services" class="nav-link" data-drupal-link-system-path="node/4871">State of the Services</a>
+              </li>
+          <li class="nav-item">
+        <a href="/services/world-data-system" class="nav-link" data-drupal-link-system-path="node/1597">World Data System</a>
+              </li>
+        </ul>
+  
+              </li>
+          <li class="nav-item">
+        <a href="/resources" class="nav-link" data-drupal-link-system-path="node/627">Resources</a>
+                                <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+        <a href="/alerts" class="nav-link" data-drupal-link-system-path="alerts">Alerts</a>
+              </li>
+          <li class="nav-item">
+        <a href="https://www.nesdis.noaa.gov/about/documents-reports/notice-of-changes" class="nav-link">Change Notices</a>
+              </li>
+          <li class="nav-item">
+        <a href="/resources/education" class="nav-link" data-drupal-link-system-path="node/629">Education</a>
+              </li>
+          <li class="nav-item">
+        <a href="/resources/metadata" class="nav-link" data-drupal-link-system-path="node/5586">Metadata</a>
+              </li>
+          <li class="nav-item">
+        <a href="/weather-climate-links" class="nav-link" data-drupal-link-system-path="node/1783">Quick Links</a>
+              </li>
+        </ul>
+  
+              </li>
+          <li class="nav-item">
+        <a href="/news" class="nav-link" data-drupal-link-system-path="node/53">News</a>
+                                <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+        <a href="/bams-state-of-climate" class="nav-link" data-drupal-link-system-path="node/1776">BAMS</a>
+              </li>
+          <li class="nav-item">
+        <a href="https://repository.library.noaa.gov/gsearch?terms=national%20centers%20for%20environmental%20information" target="_blank" class="nav-link">Publications</a>
+              </li>
+        </ul>
+  
+              </li>
+          <li class="nav-item">
+        <a href="/contact" class="nav-link" data-drupal-link-system-path="node/32">Contact</a>
+              </li>
+          <li class="nav-item">
+        <a href="/about-us" class="nav-link" data-drupal-link-system-path="node/3001">About</a>
+                                <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+        <a href="/about/locations" class="nav-link" data-drupal-link-system-path="node/1572">Locations</a>
+              </li>
+          <li class="nav-item">
+        <a href="https://www.ncei.noaa.gov/about/our-impact" class="nav-link">Our Impact</a>
+              </li>
+        </ul>
+  
+              </li>
+        </ul>
+  
+</div>
+
+
+  </nav>
+
+
+
+      <div class="collapse navbar-collapse order-1">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <form id="search_form" class="form-inline ncei-search" title="Search NCEI" action="https://search.usa.gov/search" accept-charset="UTF-8" method="get">
+              <input type="hidden" name="utf8" value="&#x2713;" class="d-none" />
+              <input type="hidden" name="affiliate" id="affiliate" class="d-none" value="nceinoaa" />
+              <label class="d-none" for="query">Enter Search Term(s):</label>
+              <input type="text" name="query" id="query" autocomplete="off" class="usagov-search-autocomplete" placeholder="Search NCEI" tabindex="0" aria-label="Search" />
+              <button class="btn btn-sm btn-search" name="commit" type="submit">
+                <img src="/themes/custom/ncei/images/icons/src/search.svg" class="icon-search" alt="Click to run NCEI search">
+                Search
+              </button>
+            </form>
+          </li>
+        </ul>
+      </div>
+        </div>
+  </nav>
+</header>
+
+  
+  
+  
+  
+  
+  <a href="#content" id="main-content" tabindex="-1" class="sr-only sr-only-focusable"></a>
+  
+      <div class="layout-content col-md-12">
+  
+                <div class="alerts">
+                  <div class="block"  class="views-element-container" id="block-views-block-ncei-alert-block-1">
+  
+    
+      <div><div class="js-view-dom-id-207e5aa06f4b26b6527f1ec755d8d5cdfbcc2f6a058b991971c7940013ae92c0">
+  
+  
+  
+
+  
+  
+  
+
+  
+<div class="site-alert">
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+  </div>
+    
+
+  
+  
+
+  
+  
+</div>
+</div>
+
+  </div>
+
+              </div>
+      <div class="row bg-blue blue-section">
+        <div class="container">
+          <div class="text-white">
+                            <div class="block"  id="block-breadcrumbs">
+  
+    
+      
+  <nav role="navigation" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+                  <a class="breadcrumb-link" href="/">Home</a>
+              </li>
+          <li class="breadcrumb-item">
+                  Page or Resource Not Found (404 Error)
+              </li>
+        </ol>
+  </nav>
+
+  </div>
+
+  
+                    </div>
+                                <h1 class=""><span property="schema:name">Page or Resource Not Found (404 Error)</span>
+</h1>
+          
+                    
+                            </div>
+      </div>
+          
+              <div class="container main-body">
+                      <div data-drupal-messages-fallback class="hidden"></div>
+<div class="block"  id="block-ncei-content">
+  
+    
+      
+<article data-history-node-id="35" about="/404" typeof="schema:WebPage" class="node node--type-page node--view-mode-full">
+      <div class="basic-page">
+            <div class="container">
+          <div class="row">
+        <div class="col">
+                                
+
+
+            <div property="schema:text" class="clearfix text-formatted"><p>We apologize, but the page or resource for which you were searching does not exist.</p>
+
+<h2>Please try the following</h2>
+
+<ul>
+	<li>Check the URL for spelling errors or typos</li>
+	<li>Review old bookmarks for the page</li>
+	<li>Go back to the <a href="/" rel="nofollow">homepage</a></li>
+	<li>Go to the <a href="/contact" rel="nofollow">contact page</a></li>
+	<li>Or, view our <a href="/sitemap" rel="nofollow">site map</a></li>
+</ul></div>
+      
+
+          
+                      
+          
+                      <div id="paragraph-wrapper">
+              
+            </div>
+          
+                                              
+                                                                                    
+                        
+                        <div class="tab-content card">
+                            <div class="tab-pane active show" id="tab-">
+                                              </div>
+                                        </div>
+                    
+                              
+                              
+                              
+                    
+                                      </div>
+      </div>
+    </div>   </div> 
+  </article>
+
+  </div>
+
+  
+      </div>
+    
+  </div>
+  
+</div>
+<footer class="container-fluid footer">
+  <div class="row">
+
+
+
+
+        <div class="container-fluid block--return-to-top return-to-top">
+      <div class="container">
+        <a href="#pagetop">Return to top</a>
+      </div>
+    </div>
+
+    <div class="container block" id="footerlinks-container">
+
+            <div class="row">
+        <div class="col-lg-12">
+          <div class="block"  id="block-hot-fix-launch">
+  
+    
+      
+
+            <div class="text-long"><style type="text/css">#block-ncei-page-title{ margin:32px 0px; }
+img{ max-width:100%; }
+</style></div>
+      
+  </div>
+<div class="block"  id="block-hackcsstohidelinkfarmatbottomofhomepage">
+  
+    
+      
+
+            <div class="text-long"><style type="text/css">.block-frontpage--link-farm{
+display:none !important;
+}
+</style></div>
+      
+  </div>
+
+
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-lg-6 col-md-12">
+                    <a href="/" alt="Home" title="Home" rel="home" class="navbar-brand"><img src="/themes/custom/ncei/components/images/logo/logo.svg" alt="National Centers for Environmental Information" title="National Centers for Environmental Information logo" class="logo logo-footer" /></a>
+        </div>
+
+                <div class="col-lg-3 col-sm-12">
+                <nav role="navigation" aria-labelledby="block-followus-menu" id="block-followus" class="block block-menu menu--footer-menu-1">
+  
+  <h2 id="block-followus-menu">Follow Us</h2>
+  
+          <ul class="nav list-unstyled flex-column menu--footer-menu-1 menu--footer-menu">
+
+          <li class="menu-item nav-item">
+      <a href="https://www.facebook.com/NOAANCEI/" class="facebook" title="Link to @NOAANCEI Facebook">@NOAANCEI</a>
+    </li>
+          <li class="menu-item nav-item">
+      <a href="https://www.instagram.com/noaadata/" class="instagram" title="Link to @NOAAData Instagram">@NOAAData</a>
+    </li>
+          <li class="menu-item nav-item">
+      <a href="https://twitter.com/NOAANCEI" class="x" title="Link to @NOAANCEI Twitter">@NOAANCEI</a>
+    </li>
+          <li class="menu-item nav-item">
+      <a href="/news.xml" class="rss" title="Link to subscribe to NCEI News Feed" data-drupal-link-system-path="news.xml">News Feed</a>
+    </li>
+  
+  </ul>
+
+
+  </nav>
+
+  
+        </div>
+        
+                <div class="col-lg-3 col-sm-12">
+                <nav role="navigation" aria-labelledby="block-contactus-menu" id="block-contactus" class="block block-menu menu--footer-menu-2">
+  
+  <h2 id="block-contactus-menu">Contact Us</h2>
+  
+          <ul class="nav list-unstyled flex-column menu--footer-menu-2 menu--footer-menu menu--contact-us">
+                <li class="menu-item nav-item">
+        <a href="/contact" class="nav-link" title="Contact NCEI NOAA via email" data-drupal-link-system-path="node/32">Email by topic</a>
+      </li>
+                <li class="menu-item nav-item">
+        <a href="tel:18282714800" class="nav-link" title="Call NCEI NOAA 828-271-4800">Phone: (828) 271-4800</a>
+      </li>
+      </ul>
+
+  </nav>
+
+  
+        </div>
+        
+      </div>    </div>  </div>
+    <div class="block block-footer-nesdis-links" id="footer-nesdis-links-container">
+    <nav role="navigation" aria-labelledby="" id="block-footernesdislinks" class="block block-menu menu--footer-nesdis-links">
+      <div class="container">
+  <div class="col-lg-12">
+    <ul class="nav list-inline menu--footer-nesdis-links">
+                      <li class="menu-item nav-item list-inline-item">
+          <a href="/sitemap" class="nav-link" data-drupal-link-system-path="node/400">Sitemap</a>
+        </li>
+                      <li class="menu-item nav-item list-inline-item">
+          <a href="/privacy" class="nav-link" data-drupal-link-system-path="node/106">Privacy Policy</a>
+        </li>
+                      <li class="menu-item nav-item list-inline-item">
+          <a href="https://www.noaa.gov/information-technology/foia" class="nav-link">Freedom of Information Act</a>
+        </li>
+                      <li class="menu-item nav-item list-inline-item">
+          <a href="https://www.noaa.gov/organization/information-technology/policy-oversight/information-quality" class="nav-link">Information Quality</a>
+        </li>
+                      <li class="menu-item nav-item list-inline-item">
+          <a href="https://www.ncei.noaa.gov/accessibility" class="nav-link">Accessibility</a>
+        </li>
+                      <li class="menu-item nav-item list-inline-item">
+          <a href="https://www.noaa.gov/disclaimer" class="nav-link">Disclaimer</a>
+        </li>
+                      <li class="menu-item nav-item list-inline-item">
+          <a href="https://www.commerce.gov/" class="nav-link">Department of Commerce</a>
+        </li>
+                      <li class="menu-item nav-item list-inline-item">
+          <a href="https://www.noaa.gov/" class="nav-link">NOAA</a>
+        </li>
+                      <li class="menu-item nav-item list-inline-item">
+          <a href="http://www.nesdis.noaa.gov/" class="nav-link">NESDIS</a>
+        </li>
+          </ul>
+  </div>
+</div>
+
+  </nav>
+
+
+  </div>
+
+
+</footer>
+
+  
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","pathPrefix":"","currentPath":"","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"back_to_top":{"back_to_top_button_trigger":100,"back_to_top_speed":1200,"back_to_top_prevent_on_mobile":true,"back_to_top_prevent_in_admin":false,"back_to_top_button_type":"image","back_to_top_button_text":"Back to top"},"google_analytics":{"account":"G-E1Q1BML6E5","trackOutbound":true,"trackMailto":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip","trackDomainMode":1},"data":{"extlink":{"extTarget":true,"extTargetAppendNewWindowLabel":"(opens in a new window)","extTargetNoOverride":false,"extNofollow":false,"extTitleNoOverride":false,"extNoreferrer":false,"extFollowNoOverride":false,"extClass":"ext","extLabel":"(link is external)","extImgClass":false,"extSubdomains":true,"extExclude":"(arcgis\\.com)","extInclude":"","extCssExclude":"","extCssInclude":"","extCssExplicit":"","extAlert":true,"extAlertText":"You are exiting the NCEI website\r\n\r\nThank you for visiting our site. We have provided a link because it has information that may interest you. NCEI does not endorse the views expressed, the information presented, or any commercial products that may be advertised or available on that site.","extHideIcons":false,"mailtoClass":"mailto","telClass":"","mailtoLabel":"(link sends email)","telLabel":"(link is a phone number)","extUseFontAwesome":false,"extIconPlacement":"append","extPreventOrphan":false,"extFaLinkClasses":"fa fa-external-link","extFaMailtoClasses":"fa fa-envelope-o","extAdditionalLinkClasses":"","extAdditionalMailtoClasses":"","extAdditionalTelClasses":"","extFaTelClasses":"fa fa-phone","whitelistedDomains":[],"extExcludeNoreferrer":""}},"statistics":{"data":{"nid":"35"},"url":"\/core\/modules\/statistics\/statistics.php"},"user":{"uid":0,"permissionsHash":"9ca7469ccce0ec14182326c09d515253f2e024400bc7adcbc1515c417ee45053"}}</script>
+<script src="/core/assets/vendor/jquery/jquery.min.js?v=3.7.1"></script>
+<script src="/core/assets/vendor/once/once.min.js?v=1.0.1"></script>
+<script src="/core/misc/drupalSettingsLoader.js?v=10.4.5"></script>
+<script src="/core/misc/drupal.js?v=10.4.5"></script>
+<script src="/core/misc/drupal.init.js?v=10.4.5"></script>
+<script src="https://static.addtoany.com/menu/page.js" defer></script>
+<script src="/modules/contrib/addtoany/js/addtoany.js?v=10.4.5"></script>
+<script src="/modules/contrib/back_to_top/js/back_to_top.js?v=10.4.5"></script>
+<script src="/modules/contrib/extlink/js/extlink.js?v=10.4.5"></script>
+<script src="/modules/contrib/google_analytics/js/google_analytics.js?v=10.4.5"></script>
+<script src="/themes/custom/ncei/node_modules/bootstrap/dist/js/bootstrap.min.js?syu3co"></script>
+<script src="/themes/custom/ncei/public/js/ncei.js?syu3co"></script>
+<script src="/libraries/uswds/js/uswds-init.min.js?syu3co"></script>
+<script src="/libraries/uswds/js/uswds.min.js?syu3co"></script>
+<script src="//search.usa.gov/javascripts/remote.loader.js"></script>
+<script src="https://siteimproveanalytics.com/js/siteanalyze_6294131.js"></script>
+<script src="https://touchpoints.app.cloud.gov/touchpoints/89426825.js"></script>
+<script src="/modules/custom/pullquote/js/pullquote.admin.js?v=1.x"></script>
+<script src="/modules/custom/pullquote/js/pullquote.styles.js?v=1.x"></script>
+<script src="/core/modules/statistics/statistics.js?v=10.4.5"></script>
+
+          </body>
+</html>
+
+[2025-07-05T10:16:40.242+0000] {taskinstance.py:1935} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/http/hooks/http.py", line 176, in check_response
+    response.raise_for_status()
+  File "/home/airflow/.local/lib/python3.8/site-packages/requests/models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://www.ncei.noaa.gov/https://www.ncei.noaa.gov/pub/data/ghcn/daily/by_year/2020.csv.gz
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 221, in execute
+    return_value = super().execute(context)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 192, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 209, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/weather_data_pipeline.py", line 56, in download_and_process
+    r = HttpHook(method="GET", http_conn_id='noaa_http').run(endpoint=url)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/http/hooks/http.py", line 166, in run
+    return self.run_and_check(session, prepped_request, extra_options)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/http/hooks/http.py", line 217, in run_and_check
+    self.check_response(response)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/http/hooks/http.py", line 180, in check_response
+    raise AirflowException(str(response.status_code) + ":" + response.reason)
+airflow.exceptions.AirflowException: 404:Not Found
+[2025-07-05T10:16:40.247+0000] {taskinstance.py:1398} INFO - Marking task as UP_FOR_RETRY. dag_id=weather_data_pipeline, task_id=download_and_process, map_index=0, execution_date=20250705T101635, start_date=20250705T101638, end_date=20250705T101640
+[2025-07-05T10:16:40.256+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 17 for task download_and_process (404:Not Found; 736)
+[2025-07-05T10:16:40.277+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2025-07-05T10:16:40.287+0000] {taskinstance.py:2776} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,13 @@
+services:
+  app:
+    build: .
+    ports:
+      - "5001:5001"
+    volumes:
+      - .:/app
+    working_dir: /app
+    command: flask run --host=0.0.0.0 --port=${PORT}
+    environment:
+      FLASK_APP: app.py
+      FLASK_ENV: development
+      PORT: 5001

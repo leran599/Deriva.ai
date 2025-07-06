@@ -1,0 +1,322 @@
+[2025-07-06T05:18:48.106+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: weather_data_pipeline.download_and_process manual__2025-07-06T05:18:40+00:00 map_index=3 [queued]>
+[2025-07-06T05:18:48.173+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: weather_data_pipeline.download_and_process manual__2025-07-06T05:18:40+00:00 map_index=3 [queued]>
+[2025-07-06T05:18:48.174+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 2
+[2025-07-06T05:18:48.184+0000] {taskinstance.py:1380} INFO - Executing <Mapped(_PythonDecoratedOperator): download_and_process> on 2025-07-06 05:18:40+00:00
+[2025-07-06T05:18:48.188+0000] {standard_task_runner.py:57} INFO - Started process 270 to run task
+[2025-07-06T05:18:48.191+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'weather_data_pipeline', 'download_and_process', 'manual__2025-07-06T05:18:40+00:00', '--job-id', '193', '--raw', '--subdir', 'DAGS_FOLDER/weather_data_pipeline.py', '--cfg-path', '/tmp/tmpgedrhik8', '--map-index', '3']
+[2025-07-06T05:18:48.194+0000] {standard_task_runner.py:85} INFO - Job 193: Subtask download_and_process
+[2025-07-06T05:18:48.285+0000] {logging_mixin.py:151} WARNING - /home/***/.local/lib/python3.8/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-07-06T05:18:48.381+0000] {task_command.py:415} INFO - Running <TaskInstance: weather_data_pipeline.download_and_process manual__2025-07-06T05:18:40+00:00 map_index=3 [running]> on host 31e09c8c81b8
+[2025-07-06T05:18:49.603+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='weather_data_pipeline' AIRFLOW_CTX_TASK_ID='download_and_process' AIRFLOW_CTX_EXECUTION_DATE='2025-07-06T05:18:40+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-07-06T05:18:40+00:00'
+[2025-07-06T05:18:49.604+0000] {logging_mixin.py:151} INFO - Starting download of 2023.csv.gz
+[2025-07-06T05:18:49.608+0000] {base.py:73} INFO - Using connection ID 'noaa_http' for task execution.
+[2025-07-06T05:18:49.608+0000] {logging_mixin.py:151} INFO - Downloading from: https://www.ncei.noaa.gov/pub/data/ghcn/daily/by_year/2023.csv.gz
+[2025-07-06T05:18:49.610+0000] {base.py:73} INFO - Using connection ID 'noaa_http' for task execution.
+[2025-07-06T05:26:44.172+0000] {logging_mixin.py:151} INFO - Download completed for 2023.csv.gz, size: 173524171 bytes
+[2025-07-06T05:26:44.172+0000] {logging_mixin.py:151} INFO - Processing 2023.csv.gz in chunks of 10000 rows...
+[2025-07-06T05:26:44.273+0000] {logging_mixin.py:151} INFO - Processed chunk 1, total rows so far: 10000
+[2025-07-06T05:26:44.594+0000] {logging_mixin.py:151} INFO - Processed chunk 11, total rows so far: 110000
+[2025-07-06T05:26:45.074+0000] {logging_mixin.py:151} INFO - Processed chunk 21, total rows so far: 210000
+[2025-07-06T05:26:45.385+0000] {logging_mixin.py:151} INFO - Processed chunk 31, total rows so far: 310000
+[2025-07-06T05:26:45.780+0000] {logging_mixin.py:151} INFO - Processed chunk 41, total rows so far: 410000
+[2025-07-06T05:26:46.176+0000] {logging_mixin.py:151} INFO - Processed chunk 51, total rows so far: 510000
+[2025-07-06T05:26:46.494+0000] {logging_mixin.py:151} INFO - Processed chunk 61, total rows so far: 610000
+[2025-07-06T05:26:46.971+0000] {logging_mixin.py:151} INFO - Processed chunk 71, total rows so far: 710000
+[2025-07-06T05:26:47.369+0000] {logging_mixin.py:151} INFO - Processed chunk 81, total rows so far: 810000
+[2025-07-06T05:26:47.794+0000] {logging_mixin.py:151} INFO - Processed chunk 91, total rows so far: 910000
+[2025-07-06T05:26:48.382+0000] {logging_mixin.py:151} INFO - Processed chunk 101, total rows so far: 1010000
+[2025-07-06T05:26:48.881+0000] {logging_mixin.py:151} INFO - Processed chunk 111, total rows so far: 1110000
+[2025-07-06T05:26:49.377+0000] {logging_mixin.py:151} INFO - Processed chunk 121, total rows so far: 1210000
+[2025-07-06T05:26:50.083+0000] {logging_mixin.py:151} INFO - Processed chunk 131, total rows so far: 1310000
+[2025-07-06T05:26:50.983+0000] {logging_mixin.py:151} INFO - Processed chunk 141, total rows so far: 1410000
+[2025-07-06T05:26:51.884+0000] {logging_mixin.py:151} INFO - Processed chunk 151, total rows so far: 1510000
+[2025-07-06T05:26:52.484+0000] {logging_mixin.py:151} INFO - Processed chunk 161, total rows so far: 1610000
+[2025-07-06T05:26:52.985+0000] {logging_mixin.py:151} INFO - Processed chunk 171, total rows so far: 1710000
+[2025-07-06T05:26:53.480+0000] {logging_mixin.py:151} INFO - Processed chunk 181, total rows so far: 1810000
+[2025-07-06T05:26:54.074+0000] {logging_mixin.py:151} INFO - Processed chunk 191, total rows so far: 1910000
+[2025-07-06T05:26:54.592+0000] {logging_mixin.py:151} INFO - Processed chunk 201, total rows so far: 2010000
+[2025-07-06T05:26:55.174+0000] {logging_mixin.py:151} INFO - Processed chunk 211, total rows so far: 2110000
+[2025-07-06T05:26:55.582+0000] {logging_mixin.py:151} INFO - Processed chunk 221, total rows so far: 2210000
+[2025-07-06T05:26:55.988+0000] {logging_mixin.py:151} INFO - Processed chunk 231, total rows so far: 2310000
+[2025-07-06T05:26:56.385+0000] {logging_mixin.py:151} INFO - Processed chunk 241, total rows so far: 2410000
+[2025-07-06T05:26:56.887+0000] {logging_mixin.py:151} INFO - Processed chunk 251, total rows so far: 2510000
+[2025-07-06T05:26:57.485+0000] {logging_mixin.py:151} INFO - Processed chunk 261, total rows so far: 2610000
+[2025-07-06T05:26:58.180+0000] {logging_mixin.py:151} INFO - Processed chunk 271, total rows so far: 2710000
+[2025-07-06T05:26:58.772+0000] {logging_mixin.py:151} INFO - Processed chunk 281, total rows so far: 2810000
+[2025-07-06T05:26:59.175+0000] {logging_mixin.py:151} INFO - Processed chunk 291, total rows so far: 2910000
+[2025-07-06T05:26:59.672+0000] {logging_mixin.py:151} INFO - Processed chunk 301, total rows so far: 3010000
+[2025-07-06T05:27:00.084+0000] {logging_mixin.py:151} INFO - Processed chunk 311, total rows so far: 3110000
+[2025-07-06T05:27:00.493+0000] {logging_mixin.py:151} INFO - Processed chunk 321, total rows so far: 3210000
+[2025-07-06T05:27:00.891+0000] {logging_mixin.py:151} INFO - Processed chunk 331, total rows so far: 3310000
+[2025-07-06T05:27:01.480+0000] {logging_mixin.py:151} INFO - Processed chunk 341, total rows so far: 3410000
+[2025-07-06T05:27:02.072+0000] {logging_mixin.py:151} INFO - Processed chunk 351, total rows so far: 3510000
+[2025-07-06T05:27:02.587+0000] {logging_mixin.py:151} INFO - Processed chunk 361, total rows so far: 3610000
+[2025-07-06T05:27:03.085+0000] {logging_mixin.py:151} INFO - Processed chunk 371, total rows so far: 3710000
+[2025-07-06T05:27:03.497+0000] {logging_mixin.py:151} INFO - Processed chunk 381, total rows so far: 3810000
+[2025-07-06T05:27:03.983+0000] {logging_mixin.py:151} INFO - Processed chunk 391, total rows so far: 3910000
+[2025-07-06T05:27:04.475+0000] {logging_mixin.py:151} INFO - Processed chunk 401, total rows so far: 4010000
+[2025-07-06T05:27:04.970+0000] {logging_mixin.py:151} INFO - Processed chunk 411, total rows so far: 4110000
+[2025-07-06T05:27:05.378+0000] {logging_mixin.py:151} INFO - Processed chunk 421, total rows so far: 4210000
+[2025-07-06T05:27:05.785+0000] {logging_mixin.py:151} INFO - Processed chunk 431, total rows so far: 4310000
+[2025-07-06T05:27:06.183+0000] {logging_mixin.py:151} INFO - Processed chunk 441, total rows so far: 4410000
+[2025-07-06T05:27:06.486+0000] {logging_mixin.py:151} INFO - Processed chunk 451, total rows so far: 4510000
+[2025-07-06T05:27:06.874+0000] {logging_mixin.py:151} INFO - Processed chunk 461, total rows so far: 4610000
+[2025-07-06T05:27:07.377+0000] {logging_mixin.py:151} INFO - Processed chunk 471, total rows so far: 4710000
+[2025-07-06T05:27:07.792+0000] {logging_mixin.py:151} INFO - Processed chunk 481, total rows so far: 4810000
+[2025-07-06T05:27:08.277+0000] {logging_mixin.py:151} INFO - Processed chunk 491, total rows so far: 4910000
+[2025-07-06T05:27:08.688+0000] {logging_mixin.py:151} INFO - Processed chunk 501, total rows so far: 5010000
+[2025-07-06T05:27:09.093+0000] {logging_mixin.py:151} INFO - Processed chunk 511, total rows so far: 5110000
+[2025-07-06T05:27:09.588+0000] {logging_mixin.py:151} INFO - Processed chunk 521, total rows so far: 5210000
+[2025-07-06T05:27:10.083+0000] {logging_mixin.py:151} INFO - Processed chunk 531, total rows so far: 5310000
+[2025-07-06T05:27:10.594+0000] {logging_mixin.py:151} INFO - Processed chunk 541, total rows so far: 5410000
+[2025-07-06T05:27:11.182+0000] {logging_mixin.py:151} INFO - Processed chunk 551, total rows so far: 5510000
+[2025-07-06T05:27:11.676+0000] {logging_mixin.py:151} INFO - Processed chunk 561, total rows so far: 5610000
+[2025-07-06T05:27:12.180+0000] {logging_mixin.py:151} INFO - Processed chunk 571, total rows so far: 5710000
+[2025-07-06T05:27:12.695+0000] {logging_mixin.py:151} INFO - Processed chunk 581, total rows so far: 5810000
+[2025-07-06T05:27:13.273+0000] {logging_mixin.py:151} INFO - Processed chunk 591, total rows so far: 5910000
+[2025-07-06T05:27:13.673+0000] {logging_mixin.py:151} INFO - Processed chunk 601, total rows so far: 6010000
+[2025-07-06T05:27:14.081+0000] {logging_mixin.py:151} INFO - Processed chunk 611, total rows so far: 6110000
+[2025-07-06T05:27:14.578+0000] {logging_mixin.py:151} INFO - Processed chunk 621, total rows so far: 6210000
+[2025-07-06T05:27:15.074+0000] {logging_mixin.py:151} INFO - Processed chunk 631, total rows so far: 6310000
+[2025-07-06T05:27:15.484+0000] {logging_mixin.py:151} INFO - Processed chunk 641, total rows so far: 6410000
+[2025-07-06T05:27:15.885+0000] {logging_mixin.py:151} INFO - Processed chunk 651, total rows so far: 6510000
+[2025-07-06T05:27:16.279+0000] {logging_mixin.py:151} INFO - Processed chunk 661, total rows so far: 6610000
+[2025-07-06T05:27:16.781+0000] {logging_mixin.py:151} INFO - Processed chunk 671, total rows so far: 6710000
+[2025-07-06T05:27:17.193+0000] {logging_mixin.py:151} INFO - Processed chunk 681, total rows so far: 6810000
+[2025-07-06T05:27:17.675+0000] {logging_mixin.py:151} INFO - Processed chunk 691, total rows so far: 6910000
+[2025-07-06T05:27:17.977+0000] {logging_mixin.py:151} INFO - Processed chunk 701, total rows so far: 7010000
+[2025-07-06T05:27:18.384+0000] {logging_mixin.py:151} INFO - Processed chunk 711, total rows so far: 7110000
+[2025-07-06T05:27:18.887+0000] {logging_mixin.py:151} INFO - Processed chunk 721, total rows so far: 7210000
+[2025-07-06T05:27:19.282+0000] {logging_mixin.py:151} INFO - Processed chunk 731, total rows so far: 7310000
+[2025-07-06T05:27:19.778+0000] {logging_mixin.py:151} INFO - Processed chunk 741, total rows so far: 7410000
+[2025-07-06T05:27:20.387+0000] {logging_mixin.py:151} INFO - Processed chunk 751, total rows so far: 7510000
+[2025-07-06T05:27:20.792+0000] {logging_mixin.py:151} INFO - Processed chunk 761, total rows so far: 7610000
+[2025-07-06T05:27:21.376+0000] {logging_mixin.py:151} INFO - Processed chunk 771, total rows so far: 7710000
+[2025-07-06T05:27:21.878+0000] {logging_mixin.py:151} INFO - Processed chunk 781, total rows so far: 7810000
+[2025-07-06T05:27:22.483+0000] {logging_mixin.py:151} INFO - Processed chunk 791, total rows so far: 7910000
+[2025-07-06T05:27:23.490+0000] {logging_mixin.py:151} INFO - Processed chunk 801, total rows so far: 8010000
+[2025-07-06T05:27:24.283+0000] {logging_mixin.py:151} INFO - Processed chunk 811, total rows so far: 8110000
+[2025-07-06T05:27:24.990+0000] {logging_mixin.py:151} INFO - Processed chunk 821, total rows so far: 8210000
+[2025-07-06T05:27:25.473+0000] {logging_mixin.py:151} INFO - Processed chunk 831, total rows so far: 8310000
+[2025-07-06T05:27:25.973+0000] {logging_mixin.py:151} INFO - Processed chunk 841, total rows so far: 8410000
+[2025-07-06T05:27:26.383+0000] {logging_mixin.py:151} INFO - Processed chunk 851, total rows so far: 8510000
+[2025-07-06T05:27:26.787+0000] {logging_mixin.py:151} INFO - Processed chunk 861, total rows so far: 8610000
+[2025-07-06T05:27:27.286+0000] {logging_mixin.py:151} INFO - Processed chunk 871, total rows so far: 8710000
+[2025-07-06T05:27:27.775+0000] {logging_mixin.py:151} INFO - Processed chunk 881, total rows so far: 8810000
+[2025-07-06T05:27:28.285+0000] {logging_mixin.py:151} INFO - Processed chunk 891, total rows so far: 8910000
+[2025-07-06T05:27:28.767+0000] {logging_mixin.py:151} INFO - Processed chunk 901, total rows so far: 9010000
+[2025-07-06T05:27:29.071+0000] {logging_mixin.py:151} INFO - Processed chunk 911, total rows so far: 9110000
+[2025-07-06T05:27:29.585+0000] {logging_mixin.py:151} INFO - Processed chunk 921, total rows so far: 9210000
+[2025-07-06T05:27:30.281+0000] {logging_mixin.py:151} INFO - Processed chunk 931, total rows so far: 9310000
+[2025-07-06T05:27:30.673+0000] {logging_mixin.py:151} INFO - Processed chunk 941, total rows so far: 9410000
+[2025-07-06T05:27:31.178+0000] {logging_mixin.py:151} INFO - Processed chunk 951, total rows so far: 9510000
+[2025-07-06T05:27:31.675+0000] {logging_mixin.py:151} INFO - Processed chunk 961, total rows so far: 9610000
+[2025-07-06T05:27:32.180+0000] {logging_mixin.py:151} INFO - Processed chunk 971, total rows so far: 9710000
+[2025-07-06T05:27:32.785+0000] {logging_mixin.py:151} INFO - Processed chunk 981, total rows so far: 9810000
+[2025-07-06T05:27:33.385+0000] {logging_mixin.py:151} INFO - Processed chunk 991, total rows so far: 9910000
+[2025-07-06T05:27:33.886+0000] {logging_mixin.py:151} INFO - Processed chunk 1001, total rows so far: 10010000
+[2025-07-06T05:27:34.482+0000] {logging_mixin.py:151} INFO - Processed chunk 1011, total rows so far: 10110000
+[2025-07-06T05:27:35.381+0000] {logging_mixin.py:151} INFO - Processed chunk 1021, total rows so far: 10210000
+[2025-07-06T05:27:35.979+0000] {logging_mixin.py:151} INFO - Processed chunk 1031, total rows so far: 10310000
+[2025-07-06T05:27:36.584+0000] {logging_mixin.py:151} INFO - Processed chunk 1041, total rows so far: 10410000
+[2025-07-06T05:27:37.177+0000] {logging_mixin.py:151} INFO - Processed chunk 1051, total rows so far: 10510000
+[2025-07-06T05:27:37.780+0000] {logging_mixin.py:151} INFO - Processed chunk 1061, total rows so far: 10610000
+[2025-07-06T05:27:38.278+0000] {logging_mixin.py:151} INFO - Processed chunk 1071, total rows so far: 10710000
+[2025-07-06T05:27:38.783+0000] {logging_mixin.py:151} INFO - Processed chunk 1081, total rows so far: 10810000
+[2025-07-06T05:27:39.188+0000] {logging_mixin.py:151} INFO - Processed chunk 1091, total rows so far: 10910000
+[2025-07-06T05:27:39.586+0000] {logging_mixin.py:151} INFO - Processed chunk 1101, total rows so far: 11010000
+[2025-07-06T05:27:39.975+0000] {logging_mixin.py:151} INFO - Processed chunk 1111, total rows so far: 11110000
+[2025-07-06T05:27:40.292+0000] {logging_mixin.py:151} INFO - Processed chunk 1121, total rows so far: 11210000
+[2025-07-06T05:27:40.673+0000] {logging_mixin.py:151} INFO - Processed chunk 1131, total rows so far: 11310000
+[2025-07-06T05:27:40.992+0000] {logging_mixin.py:151} INFO - Processed chunk 1141, total rows so far: 11410000
+[2025-07-06T05:27:41.587+0000] {logging_mixin.py:151} INFO - Processed chunk 1151, total rows so far: 11510000
+[2025-07-06T05:27:42.485+0000] {logging_mixin.py:151} INFO - Processed chunk 1161, total rows so far: 11610000
+[2025-07-06T05:27:43.176+0000] {logging_mixin.py:151} INFO - Processed chunk 1171, total rows so far: 11710000
+[2025-07-06T05:27:43.970+0000] {logging_mixin.py:151} INFO - Processed chunk 1181, total rows so far: 11810000
+[2025-07-06T05:27:44.581+0000] {logging_mixin.py:151} INFO - Processed chunk 1191, total rows so far: 11910000
+[2025-07-06T05:27:45.185+0000] {logging_mixin.py:151} INFO - Processed chunk 1201, total rows so far: 12010000
+[2025-07-06T05:27:45.877+0000] {logging_mixin.py:151} INFO - Processed chunk 1211, total rows so far: 12110000
+[2025-07-06T05:27:46.479+0000] {logging_mixin.py:151} INFO - Processed chunk 1221, total rows so far: 12210000
+[2025-07-06T05:27:46.984+0000] {logging_mixin.py:151} INFO - Processed chunk 1231, total rows so far: 12310000
+[2025-07-06T05:27:47.582+0000] {logging_mixin.py:151} INFO - Processed chunk 1241, total rows so far: 12410000
+[2025-07-06T05:27:48.176+0000] {logging_mixin.py:151} INFO - Processed chunk 1251, total rows so far: 12510000
+[2025-07-06T05:27:48.879+0000] {logging_mixin.py:151} INFO - Processed chunk 1261, total rows so far: 12610000
+[2025-07-06T05:27:49.369+0000] {logging_mixin.py:151} INFO - Processed chunk 1271, total rows so far: 12710000
+[2025-07-06T05:27:49.984+0000] {logging_mixin.py:151} INFO - Processed chunk 1281, total rows so far: 12810000
+[2025-07-06T05:27:50.578+0000] {logging_mixin.py:151} INFO - Processed chunk 1291, total rows so far: 12910000
+[2025-07-06T05:27:50.985+0000] {logging_mixin.py:151} INFO - Processed chunk 1301, total rows so far: 13010000
+[2025-07-06T05:27:51.482+0000] {logging_mixin.py:151} INFO - Processed chunk 1311, total rows so far: 13110000
+[2025-07-06T05:27:52.172+0000] {logging_mixin.py:151} INFO - Processed chunk 1321, total rows so far: 13210000
+[2025-07-06T05:27:52.873+0000] {logging_mixin.py:151} INFO - Processed chunk 1331, total rows so far: 13310000
+[2025-07-06T05:27:53.668+0000] {logging_mixin.py:151} INFO - Processed chunk 1341, total rows so far: 13410000
+[2025-07-06T05:27:54.095+0000] {logging_mixin.py:151} INFO - Processed chunk 1351, total rows so far: 13510000
+[2025-07-06T05:27:54.673+0000] {logging_mixin.py:151} INFO - Processed chunk 1361, total rows so far: 13610000
+[2025-07-06T05:27:55.386+0000] {logging_mixin.py:151} INFO - Processed chunk 1371, total rows so far: 13710000
+[2025-07-06T05:27:56.077+0000] {logging_mixin.py:151} INFO - Processed chunk 1381, total rows so far: 13810000
+[2025-07-06T05:27:56.585+0000] {logging_mixin.py:151} INFO - Processed chunk 1391, total rows so far: 13910000
+[2025-07-06T05:27:57.070+0000] {logging_mixin.py:151} INFO - Processed chunk 1401, total rows so far: 14010000
+[2025-07-06T05:27:57.473+0000] {logging_mixin.py:151} INFO - Processed chunk 1411, total rows so far: 14110000
+[2025-07-06T05:27:57.787+0000] {logging_mixin.py:151} INFO - Processed chunk 1421, total rows so far: 14210000
+[2025-07-06T05:27:58.286+0000] {logging_mixin.py:151} INFO - Processed chunk 1431, total rows so far: 14310000
+[2025-07-06T05:27:58.692+0000] {logging_mixin.py:151} INFO - Processed chunk 1441, total rows so far: 14410000
+[2025-07-06T05:27:59.179+0000] {logging_mixin.py:151} INFO - Processed chunk 1451, total rows so far: 14510000
+[2025-07-06T05:27:59.588+0000] {logging_mixin.py:151} INFO - Processed chunk 1461, total rows so far: 14610000
+[2025-07-06T05:28:00.077+0000] {logging_mixin.py:151} INFO - Processed chunk 1471, total rows so far: 14710000
+[2025-07-06T05:28:00.487+0000] {logging_mixin.py:151} INFO - Processed chunk 1481, total rows so far: 14810000
+[2025-07-06T05:28:00.983+0000] {logging_mixin.py:151} INFO - Processed chunk 1491, total rows so far: 14910000
+[2025-07-06T05:28:01.476+0000] {logging_mixin.py:151} INFO - Processed chunk 1501, total rows so far: 15010000
+[2025-07-06T05:28:01.874+0000] {logging_mixin.py:151} INFO - Processed chunk 1511, total rows so far: 15110000
+[2025-07-06T05:28:02.185+0000] {logging_mixin.py:151} INFO - Processed chunk 1521, total rows so far: 15210000
+[2025-07-06T05:28:02.586+0000] {logging_mixin.py:151} INFO - Processed chunk 1531, total rows so far: 15310000
+[2025-07-06T05:28:03.075+0000] {logging_mixin.py:151} INFO - Processed chunk 1541, total rows so far: 15410000
+[2025-07-06T05:28:03.397+0000] {logging_mixin.py:151} INFO - Processed chunk 1551, total rows so far: 15510000
+[2025-07-06T05:28:03.973+0000] {logging_mixin.py:151} INFO - Processed chunk 1561, total rows so far: 15610000
+[2025-07-06T05:28:04.475+0000] {logging_mixin.py:151} INFO - Processed chunk 1571, total rows so far: 15710000
+[2025-07-06T05:28:04.980+0000] {logging_mixin.py:151} INFO - Processed chunk 1581, total rows so far: 15810000
+[2025-07-06T05:28:05.382+0000] {logging_mixin.py:151} INFO - Processed chunk 1591, total rows so far: 15910000
+[2025-07-06T05:28:05.885+0000] {logging_mixin.py:151} INFO - Processed chunk 1601, total rows so far: 16010000
+[2025-07-06T05:28:06.289+0000] {logging_mixin.py:151} INFO - Processed chunk 1611, total rows so far: 16110000
+[2025-07-06T05:28:06.696+0000] {logging_mixin.py:151} INFO - Processed chunk 1621, total rows so far: 16210000
+[2025-07-06T05:28:07.189+0000] {logging_mixin.py:151} INFO - Processed chunk 1631, total rows so far: 16310000
+[2025-07-06T05:28:07.682+0000] {logging_mixin.py:151} INFO - Processed chunk 1641, total rows so far: 16410000
+[2025-07-06T05:28:08.089+0000] {logging_mixin.py:151} INFO - Processed chunk 1651, total rows so far: 16510000
+[2025-07-06T05:28:08.480+0000] {logging_mixin.py:151} INFO - Processed chunk 1661, total rows so far: 16610000
+[2025-07-06T05:28:08.887+0000] {logging_mixin.py:151} INFO - Processed chunk 1671, total rows so far: 16710000
+[2025-07-06T05:28:09.384+0000] {logging_mixin.py:151} INFO - Processed chunk 1681, total rows so far: 16810000
+[2025-07-06T05:28:09.885+0000] {logging_mixin.py:151} INFO - Processed chunk 1691, total rows so far: 16910000
+[2025-07-06T05:28:10.381+0000] {logging_mixin.py:151} INFO - Processed chunk 1701, total rows so far: 17010000
+[2025-07-06T05:28:10.873+0000] {logging_mixin.py:151} INFO - Processed chunk 1711, total rows so far: 17110000
+[2025-07-06T05:28:11.381+0000] {logging_mixin.py:151} INFO - Processed chunk 1721, total rows so far: 17210000
+[2025-07-06T05:28:11.782+0000] {logging_mixin.py:151} INFO - Processed chunk 1731, total rows so far: 17310000
+[2025-07-06T05:28:12.170+0000] {logging_mixin.py:151} INFO - Processed chunk 1741, total rows so far: 17410000
+[2025-07-06T05:28:12.491+0000] {logging_mixin.py:151} INFO - Processed chunk 1751, total rows so far: 17510000
+[2025-07-06T05:28:12.873+0000] {logging_mixin.py:151} INFO - Processed chunk 1761, total rows so far: 17610000
+[2025-07-06T05:28:13.185+0000] {logging_mixin.py:151} INFO - Processed chunk 1771, total rows so far: 17710000
+[2025-07-06T05:28:13.580+0000] {logging_mixin.py:151} INFO - Processed chunk 1781, total rows so far: 17810000
+[2025-07-06T05:28:13.882+0000] {logging_mixin.py:151} INFO - Processed chunk 1791, total rows so far: 17910000
+[2025-07-06T05:28:14.294+0000] {logging_mixin.py:151} INFO - Processed chunk 1801, total rows so far: 18010000
+[2025-07-06T05:28:14.773+0000] {logging_mixin.py:151} INFO - Processed chunk 1811, total rows so far: 18110000
+[2025-07-06T05:28:15.184+0000] {logging_mixin.py:151} INFO - Processed chunk 1821, total rows so far: 18210000
+[2025-07-06T05:28:15.785+0000] {logging_mixin.py:151} INFO - Processed chunk 1831, total rows so far: 18310000
+[2025-07-06T05:28:16.272+0000] {logging_mixin.py:151} INFO - Processed chunk 1841, total rows so far: 18410000
+[2025-07-06T05:28:16.779+0000] {logging_mixin.py:151} INFO - Processed chunk 1851, total rows so far: 18510000
+[2025-07-06T05:28:17.486+0000] {logging_mixin.py:151} INFO - Processed chunk 1861, total rows so far: 18610000
+[2025-07-06T05:28:18.189+0000] {logging_mixin.py:151} INFO - Processed chunk 1871, total rows so far: 18710000
+[2025-07-06T05:28:18.780+0000] {logging_mixin.py:151} INFO - Processed chunk 1881, total rows so far: 18810000
+[2025-07-06T05:28:19.281+0000] {logging_mixin.py:151} INFO - Processed chunk 1891, total rows so far: 18910000
+[2025-07-06T05:28:19.779+0000] {logging_mixin.py:151} INFO - Processed chunk 1901, total rows so far: 19010000
+[2025-07-06T05:28:20.387+0000] {logging_mixin.py:151} INFO - Processed chunk 1911, total rows so far: 19110000
+[2025-07-06T05:28:21.078+0000] {logging_mixin.py:151} INFO - Processed chunk 1921, total rows so far: 19210000
+[2025-07-06T05:28:21.681+0000] {logging_mixin.py:151} INFO - Processed chunk 1931, total rows so far: 19310000
+[2025-07-06T05:28:22.272+0000] {logging_mixin.py:151} INFO - Processed chunk 1941, total rows so far: 19410000
+[2025-07-06T05:28:22.791+0000] {logging_mixin.py:151} INFO - Processed chunk 1951, total rows so far: 19510000
+[2025-07-06T05:28:23.379+0000] {logging_mixin.py:151} INFO - Processed chunk 1961, total rows so far: 19610000
+[2025-07-06T05:28:23.993+0000] {logging_mixin.py:151} INFO - Processed chunk 1971, total rows so far: 19710000
+[2025-07-06T05:28:24.377+0000] {logging_mixin.py:151} INFO - Processed chunk 1981, total rows so far: 19810000
+[2025-07-06T05:28:24.684+0000] {logging_mixin.py:151} INFO - Processed chunk 1991, total rows so far: 19910000
+[2025-07-06T05:28:25.186+0000] {logging_mixin.py:151} INFO - Processed chunk 2001, total rows so far: 20010000
+[2025-07-06T05:28:25.594+0000] {logging_mixin.py:151} INFO - Processed chunk 2011, total rows so far: 20110000
+[2025-07-06T05:28:25.989+0000] {logging_mixin.py:151} INFO - Processed chunk 2021, total rows so far: 20210000
+[2025-07-06T05:28:26.392+0000] {logging_mixin.py:151} INFO - Processed chunk 2031, total rows so far: 20310000
+[2025-07-06T05:28:27.173+0000] {logging_mixin.py:151} INFO - Processed chunk 2041, total rows so far: 20410000
+[2025-07-06T05:28:27.884+0000] {logging_mixin.py:151} INFO - Processed chunk 2051, total rows so far: 20510000
+[2025-07-06T05:28:28.779+0000] {logging_mixin.py:151} INFO - Processed chunk 2061, total rows so far: 20610000
+[2025-07-06T05:28:29.192+0000] {logging_mixin.py:151} INFO - Processed chunk 2071, total rows so far: 20710000
+[2025-07-06T05:28:29.682+0000] {logging_mixin.py:151} INFO - Processed chunk 2081, total rows so far: 20810000
+[2025-07-06T05:28:30.077+0000] {logging_mixin.py:151} INFO - Processed chunk 2091, total rows so far: 20910000
+[2025-07-06T05:28:30.575+0000] {logging_mixin.py:151} INFO - Processed chunk 2101, total rows so far: 21010000
+[2025-07-06T05:28:31.079+0000] {logging_mixin.py:151} INFO - Processed chunk 2111, total rows so far: 21110000
+[2025-07-06T05:28:31.581+0000] {logging_mixin.py:151} INFO - Processed chunk 2121, total rows so far: 21210000
+[2025-07-06T05:28:32.078+0000] {logging_mixin.py:151} INFO - Processed chunk 2131, total rows so far: 21310000
+[2025-07-06T05:28:32.497+0000] {logging_mixin.py:151} INFO - Processed chunk 2141, total rows so far: 21410000
+[2025-07-06T05:28:32.985+0000] {logging_mixin.py:151} INFO - Processed chunk 2151, total rows so far: 21510000
+[2025-07-06T05:28:33.479+0000] {logging_mixin.py:151} INFO - Processed chunk 2161, total rows so far: 21610000
+[2025-07-06T05:28:33.994+0000] {logging_mixin.py:151} INFO - Processed chunk 2171, total rows so far: 21710000
+[2025-07-06T05:28:34.575+0000] {logging_mixin.py:151} INFO - Processed chunk 2181, total rows so far: 21810000
+[2025-07-06T05:28:35.085+0000] {logging_mixin.py:151} INFO - Processed chunk 2191, total rows so far: 21910000
+[2025-07-06T05:28:35.472+0000] {logging_mixin.py:151} INFO - Processed chunk 2201, total rows so far: 22010000
+[2025-07-06T05:28:35.789+0000] {logging_mixin.py:151} INFO - Processed chunk 2211, total rows so far: 22110000
+[2025-07-06T05:28:36.271+0000] {logging_mixin.py:151} INFO - Processed chunk 2221, total rows so far: 22210000
+[2025-07-06T05:28:36.592+0000] {logging_mixin.py:151} INFO - Processed chunk 2231, total rows so far: 22310000
+[2025-07-06T05:28:37.083+0000] {logging_mixin.py:151} INFO - Processed chunk 2241, total rows so far: 22410000
+[2025-07-06T05:28:37.398+0000] {logging_mixin.py:151} INFO - Processed chunk 2251, total rows so far: 22510000
+[2025-07-06T05:28:37.689+0000] {logging_mixin.py:151} INFO - Processed chunk 2261, total rows so far: 22610000
+[2025-07-06T05:28:37.985+0000] {logging_mixin.py:151} INFO - Processed chunk 2271, total rows so far: 22710000
+[2025-07-06T05:28:38.287+0000] {logging_mixin.py:151} INFO - Processed chunk 2281, total rows so far: 22810000
+[2025-07-06T05:28:38.579+0000] {logging_mixin.py:151} INFO - Processed chunk 2291, total rows so far: 22910000
+[2025-07-06T05:28:38.803+0000] {logging_mixin.py:151} INFO - Processed chunk 2301, total rows so far: 23010000
+[2025-07-06T05:28:39.097+0000] {logging_mixin.py:151} INFO - Processed chunk 2311, total rows so far: 23110000
+[2025-07-06T05:28:39.487+0000] {logging_mixin.py:151} INFO - Processed chunk 2321, total rows so far: 23210000
+[2025-07-06T05:28:39.885+0000] {logging_mixin.py:151} INFO - Processed chunk 2331, total rows so far: 23310000
+[2025-07-06T05:28:40.185+0000] {logging_mixin.py:151} INFO - Processed chunk 2341, total rows so far: 23410000
+[2025-07-06T05:28:40.493+0000] {logging_mixin.py:151} INFO - Processed chunk 2351, total rows so far: 23510000
+[2025-07-06T05:28:40.796+0000] {logging_mixin.py:151} INFO - Processed chunk 2361, total rows so far: 23610000
+[2025-07-06T05:28:41.097+0000] {logging_mixin.py:151} INFO - Processed chunk 2371, total rows so far: 23710000
+[2025-07-06T05:28:41.386+0000] {logging_mixin.py:151} INFO - Processed chunk 2381, total rows so far: 23810000
+[2025-07-06T05:28:41.672+0000] {logging_mixin.py:151} INFO - Processed chunk 2391, total rows so far: 23910000
+[2025-07-06T05:28:41.976+0000] {logging_mixin.py:151} INFO - Processed chunk 2401, total rows so far: 24010000
+[2025-07-06T05:28:42.273+0000] {logging_mixin.py:151} INFO - Processed chunk 2411, total rows so far: 24110000
+[2025-07-06T05:28:42.570+0000] {logging_mixin.py:151} INFO - Processed chunk 2421, total rows so far: 24210000
+[2025-07-06T05:28:42.879+0000] {logging_mixin.py:151} INFO - Processed chunk 2431, total rows so far: 24310000
+[2025-07-06T05:28:43.098+0000] {logging_mixin.py:151} INFO - Processed chunk 2441, total rows so far: 24410000
+[2025-07-06T05:28:43.399+0000] {logging_mixin.py:151} INFO - Processed chunk 2451, total rows so far: 24510000
+[2025-07-06T05:28:43.690+0000] {logging_mixin.py:151} INFO - Processed chunk 2461, total rows so far: 24610000
+[2025-07-06T05:28:43.983+0000] {logging_mixin.py:151} INFO - Processed chunk 2471, total rows so far: 24710000
+[2025-07-06T05:28:44.278+0000] {logging_mixin.py:151} INFO - Processed chunk 2481, total rows so far: 24810000
+[2025-07-06T05:28:44.579+0000] {logging_mixin.py:151} INFO - Processed chunk 2491, total rows so far: 24910000
+[2025-07-06T05:28:44.872+0000] {logging_mixin.py:151} INFO - Processed chunk 2501, total rows so far: 25010000
+[2025-07-06T05:28:45.102+0000] {logging_mixin.py:151} INFO - Processed chunk 2511, total rows so far: 25110000
+[2025-07-06T05:28:45.474+0000] {logging_mixin.py:151} INFO - Processed chunk 2521, total rows so far: 25210000
+[2025-07-06T05:28:45.777+0000] {logging_mixin.py:151} INFO - Processed chunk 2531, total rows so far: 25310000
+[2025-07-06T05:28:46.100+0000] {logging_mixin.py:151} INFO - Processed chunk 2541, total rows so far: 25410000
+[2025-07-06T05:28:46.375+0000] {logging_mixin.py:151} INFO - Processed chunk 2551, total rows so far: 25510000
+[2025-07-06T05:28:46.587+0000] {logging_mixin.py:151} INFO - Processed chunk 2561, total rows so far: 25610000
+[2025-07-06T05:28:46.878+0000] {logging_mixin.py:151} INFO - Processed chunk 2571, total rows so far: 25710000
+[2025-07-06T05:28:47.168+0000] {logging_mixin.py:151} INFO - Processed chunk 2581, total rows so far: 25810000
+[2025-07-06T05:28:47.395+0000] {logging_mixin.py:151} INFO - Processed chunk 2591, total rows so far: 25910000
+[2025-07-06T05:28:47.687+0000] {logging_mixin.py:151} INFO - Processed chunk 2601, total rows so far: 26010000
+[2025-07-06T05:28:47.979+0000] {logging_mixin.py:151} INFO - Processed chunk 2611, total rows so far: 26110000
+[2025-07-06T05:28:48.301+0000] {logging_mixin.py:151} INFO - Processed chunk 2621, total rows so far: 26210000
+[2025-07-06T05:28:48.577+0000] {logging_mixin.py:151} INFO - Processed chunk 2631, total rows so far: 26310000
+[2025-07-06T05:28:48.706+0000] {logging_mixin.py:151} INFO - Processed chunk 2641, total rows so far: 26410000
+[2025-07-06T05:28:48.888+0000] {logging_mixin.py:151} INFO - Processed chunk 2651, total rows so far: 26510000
+[2025-07-06T05:28:49.017+0000] {logging_mixin.py:151} INFO - Processed chunk 2661, total rows so far: 26610000
+[2025-07-06T05:28:49.196+0000] {logging_mixin.py:151} INFO - Processed chunk 2671, total rows so far: 26710000
+[2025-07-06T05:28:49.376+0000] {logging_mixin.py:151} INFO - Processed chunk 2681, total rows so far: 26810000
+[2025-07-06T05:28:49.501+0000] {logging_mixin.py:151} INFO - Processed chunk 2691, total rows so far: 26910000
+[2025-07-06T05:28:49.605+0000] {timeout.py:68} ERROR - Process timed out, PID: 270
+[2025-07-06T05:28:49.607+0000] {logging_mixin.py:151} INFO - Error downloading 2023.csv.gz: Timeout, PID: 270
+[2025-07-06T05:28:49.615+0000] {taskinstance.py:1935} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 221, in execute
+    return_value = super().execute(context)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 192, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 209, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/weather_data_pipeline.py", line 99, in download_and_process
+    for chunk_num, chunk_df in enumerate(pd.read_csv(f, header=None,
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/io/parsers/readers.py", line 1624, in __next__
+    return self.get_chunk()
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/io/parsers/readers.py", line 1733, in get_chunk
+    return self.read(nrows=size)
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/io/parsers/readers.py", line 1704, in read
+    ) = self._engine.read(  # type: ignore[attr-defined]
+  File "/home/airflow/.local/lib/python3.8/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 234, in read
+    chunks = self._reader.read_low_memory(nrows)
+  File "pandas/_libs/parsers.pyx", line 826, in pandas._libs.parsers.TextReader.read_low_memory
+  File "pandas/_libs/parsers.pyx", line 875, in pandas._libs.parsers.TextReader._read_rows
+  File "pandas/_libs/parsers.pyx", line 850, in pandas._libs.parsers.TextReader._tokenize_rows
+  File "pandas/_libs/parsers.pyx", line 861, in pandas._libs.parsers.TextReader._check_tokenize_status
+  File "pandas/_libs/parsers.pyx", line 2021, in pandas._libs.parsers.raise_parser_error
+  File "/usr/local/lib/python3.8/_compression.py", line 68, in readinto
+    data = self.read(len(byte_view))
+  File "/usr/local/lib/python3.8/gzip.py", line 487, in read
+    uncompress = self._decompressor.decompress(buf, size)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/timeout.py", line 69, in handle_timeout
+    raise AirflowTaskTimeout(self.error_message)
+airflow.exceptions.AirflowTaskTimeout: Timeout, PID: 270
+[2025-07-06T05:28:49.619+0000] {taskinstance.py:1398} INFO - Marking task as UP_FOR_RETRY. dag_id=weather_data_pipeline, task_id=download_and_process, map_index=3, execution_date=20250706T051840, start_date=20250706T051848, end_date=20250706T052849
+[2025-07-06T05:28:49.623+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 193 for task download_and_process (Timeout, PID: 270; 270)
+[2025-07-06T05:28:49.635+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2025-07-06T05:28:49.708+0000] {taskinstance.py:2776} INFO - 0 downstream tasks scheduled from follow-on schedule check

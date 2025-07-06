@@ -1,0 +1,43 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Virtual environments
+venv/
+.venv/
+env/
+.env/
+
+# Environment files
+.env
+.env.* 
+*.env
+
+# pipenv/poetry
+pipfile.lock
+poetry.lock
+
+# mypy / pytest / coverage
+.mypy_cache/
+.pytest_cache/
+coverage.*
+htmlcov/
+
+# Airflow
+airflow.db
+airflow.cfg
+logs/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# VSCode
+.vscode/
+
+# Mac/Linux/Windows junk
+.DS_Store
+Thumbs.db

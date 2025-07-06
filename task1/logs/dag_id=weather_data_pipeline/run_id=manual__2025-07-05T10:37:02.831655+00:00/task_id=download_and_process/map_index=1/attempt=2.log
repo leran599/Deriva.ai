@@ -1,0 +1,62 @@
+[2025-07-05T10:43:01.227+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: weather_data_pipeline.download_and_process manual__2025-07-05T10:37:02.831655+00:00 map_index=1 [queued]>
+[2025-07-05T10:43:01.230+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: weather_data_pipeline.download_and_process manual__2025-07-05T10:37:02.831655+00:00 map_index=1 [queued]>
+[2025-07-05T10:43:01.231+0000] {taskinstance.py:1359} INFO - Starting attempt 2 of 2
+[2025-07-05T10:43:01.236+0000] {taskinstance.py:1380} INFO - Executing <Mapped(_PythonDecoratedOperator): download_and_process> on 2025-07-05 10:37:02.831655+00:00
+[2025-07-05T10:43:01.239+0000] {standard_task_runner.py:57} INFO - Started process 1157 to run task
+[2025-07-05T10:43:01.241+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'weather_data_pipeline', 'download_and_process', 'manual__2025-07-05T10:37:02.831655+00:00', '--job-id', '39', '--raw', '--subdir', 'DAGS_FOLDER/weather_data_pipeline.py', '--cfg-path', '/tmp/tmpg4zd7f06', '--map-index', '1']
+[2025-07-05T10:43:01.242+0000] {standard_task_runner.py:85} INFO - Job 39: Subtask download_and_process
+[2025-07-05T10:43:01.249+0000] {logging_mixin.py:151} WARNING - /home/***/.local/lib/python3.8/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-07-05T10:43:01.264+0000] {task_command.py:415} INFO - Running <TaskInstance: weather_data_pipeline.download_and_process manual__2025-07-05T10:37:02.831655+00:00 map_index=1 [running]> on host 50a81e38c03c
+[2025-07-05T10:43:01.384+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='weather_data_pipeline' AIRFLOW_CTX_TASK_ID='download_and_process' AIRFLOW_CTX_EXECUTION_DATE='2025-07-05T10:37:02.831655+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-07-05T10:37:02.831655+00:00'
+[2025-07-05T10:43:01.388+0000] {base.py:73} INFO - Using connection ID 'noaa_http' for task execution.
+[2025-07-05T10:43:16.380+0000] {local_task_job_runner.py:294} WARNING - State of this instance has been externally set to None. Terminating instance.
+[2025-07-05T10:43:16.382+0000] {process_utils.py:131} INFO - Sending 15 to group 1157. PIDs of all processes in the group: [1157]
+[2025-07-05T10:43:16.383+0000] {process_utils.py:86} INFO - Sending the signal 15 to group 1157
+[2025-07-05T10:43:16.383+0000] {taskinstance.py:1630} ERROR - Received SIGTERM. Terminating subprocesses.
+[2025-07-05T10:43:16.391+0000] {taskinstance.py:1935} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 221, in execute
+    return_value = super().execute(context)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 192, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 209, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/weather_data_pipeline.py", line 55, in download_and_process
+    r = HttpHook(method="GET", http_conn_id='noaa_http').run('/pub/data/ghcn/daily/by_year/' + file_name)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/http/hooks/http.py", line 166, in run
+    return self.run_and_check(session, prepped_request, extra_options)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/http/hooks/http.py", line 214, in run_and_check
+    response = session.send(prepped_request, **send_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/requests/sessions.py", line 747, in send
+    r.content
+  File "/home/airflow/.local/lib/python3.8/site-packages/requests/models.py", line 899, in content
+    self._content = b"".join(self.iter_content(CONTENT_CHUNK_SIZE)) or b""
+  File "/home/airflow/.local/lib/python3.8/site-packages/requests/models.py", line 816, in generate
+    yield from self.raw.stream(chunk_size, decode_content=True)
+  File "/home/airflow/.local/lib/python3.8/site-packages/urllib3/response.py", line 628, in stream
+    data = self.read(amt=amt, decode_content=decode_content)
+  File "/home/airflow/.local/lib/python3.8/site-packages/urllib3/response.py", line 567, in read
+    data = self._fp_read(amt) if not fp_closed else b""
+  File "/home/airflow/.local/lib/python3.8/site-packages/urllib3/response.py", line 533, in _fp_read
+    return self._fp.read(amt) if amt is not None else self._fp.read()
+  File "/usr/local/lib/python3.8/http/client.py", line 459, in read
+    n = self.readinto(b)
+  File "/usr/local/lib/python3.8/http/client.py", line 503, in readinto
+    n = self.fp.readinto(b)
+  File "/usr/local/lib/python3.8/socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+  File "/usr/local/lib/python3.8/ssl.py", line 1274, in recv_into
+    return self.read(nbytes, buffer)
+  File "/usr/local/lib/python3.8/ssl.py", line 1132, in read
+    return self._sslobj.read(len, buffer)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1632, in signal_handler
+    raise AirflowException("Task received SIGTERM signal")
+airflow.exceptions.AirflowException: Task received SIGTERM signal
+[2025-07-05T10:43:16.395+0000] {taskinstance.py:1398} INFO - Marking task as FAILED. dag_id=weather_data_pipeline, task_id=download_and_process, map_index=1, execution_date=20250705T103702, start_date=20250705T104301, end_date=20250705T104316
+[2025-07-05T10:43:16.407+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 39 for task download_and_process ((psycopg2.errors.ForeignKeyViolation) insert or update on table "task_fail" violates foreign key constraint "task_fail_ti_fkey"
+DETAIL:  Key (dag_id, task_id, run_id, map_index)=(weather_data_pipeline, download_and_process, manual__2025-07-05T10:37:02.831655+00:00, 1) is not present in table "task_instance".
+
+[SQL: INSERT INTO task_fail (task_id, dag_id, run_id, map_index, start_date, end_date, duration) VALUES (%(task_id)s, %(dag_id)s, %(run_id)s, %(map_index)s, %(start_date)s, %(end_date)s, %(duration)s) RETURNING task_fail.id]
+[parameters: {'task_id': 'download_and_process', 'dag_id': 'weather_data_pipeline', 'run_id': 'manual__2025-07-05T10:37:02.831655+00:00', 'map_index': 1, 'start_date': datetime.datetime(2025, 7, 5, 10, 43, 1, 228022, tzinfo=Timezone('UTC')), 'end_date': datetime.datetime(2025, 7, 5, 10, 43, 16, 395557, tzinfo=Timezone('UTC')), 'duration': 15}]
+(Background on this error at: https://sqlalche.me/e/14/gkpj); 1157)
+[2025-07-05T10:43:16.442+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=1157, status='terminated', exitcode=1, started='10:43:00') (1157) terminated with exit code 1
