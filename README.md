@@ -2,7 +2,7 @@ TASK 1: <br>
  1.  "cd task1" <br>
  2. run & build: <br>
     "docker compose up --build" <br>
- 3. trigger the workflow: <br>
+ 3. open new terminal window & trigger the workflow: <br>
     "docker exec task1-airflow-1 airflow dags trigger weather_data_pipeline"
     <br><br>
 TASK 2: <br>
