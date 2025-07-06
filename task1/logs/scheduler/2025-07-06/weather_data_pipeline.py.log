@@ -5697,3 +5697,24 @@ IndentationError: unindent does not match any outer indentation level
 [2025-07-06T18:08:04.845+0000] {logging_mixin.py:151} INFO - [2025-07-06T18:08:04.845+0000] {dag.py:2915} INFO - Sync 1 DAGs
 [2025-07-06T18:08:04.850+0000] {logging_mixin.py:151} INFO - [2025-07-06T18:08:04.850+0000] {dag.py:3696} INFO - Setting next_dagrun for weather_data_pipeline to None, run_after=None
 [2025-07-06T18:08:04.857+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/weather_data_pipeline.py took 0.165 seconds
+[2025-07-06T18:08:35.144+0000] {processor.py:157} INFO - Started process (PID=713) to work on /opt/airflow/dags/weather_data_pipeline.py
+[2025-07-06T18:08:35.145+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/weather_data_pipeline.py for tasks to queue
+[2025-07-06T18:08:35.145+0000] {logging_mixin.py:151} INFO - [2025-07-06T18:08:35.145+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/weather_data_pipeline.py
+[2025-07-06T18:08:35.282+0000] {processor.py:839} INFO - DAG(s) dict_keys(['weather_data_pipeline']) retrieved from /opt/airflow/dags/weather_data_pipeline.py
+[2025-07-06T18:08:35.292+0000] {logging_mixin.py:151} INFO - [2025-07-06T18:08:35.292+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-07-06T18:08:35.297+0000] {logging_mixin.py:151} INFO - [2025-07-06T18:08:35.297+0000] {dag.py:3696} INFO - Setting next_dagrun for weather_data_pipeline to None, run_after=None
+[2025-07-06T18:08:35.304+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/weather_data_pipeline.py took 0.163 seconds
+[2025-07-06T18:09:05.473+0000] {processor.py:157} INFO - Started process (PID=719) to work on /opt/airflow/dags/weather_data_pipeline.py
+[2025-07-06T18:09:05.474+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/weather_data_pipeline.py for tasks to queue
+[2025-07-06T18:09:05.474+0000] {logging_mixin.py:151} INFO - [2025-07-06T18:09:05.474+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/weather_data_pipeline.py
+[2025-07-06T18:09:05.616+0000] {processor.py:839} INFO - DAG(s) dict_keys(['weather_data_pipeline']) retrieved from /opt/airflow/dags/weather_data_pipeline.py
+[2025-07-06T18:09:05.628+0000] {logging_mixin.py:151} INFO - [2025-07-06T18:09:05.628+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-07-06T18:09:05.635+0000] {logging_mixin.py:151} INFO - [2025-07-06T18:09:05.635+0000] {dag.py:3696} INFO - Setting next_dagrun for weather_data_pipeline to None, run_after=None
+[2025-07-06T18:09:05.643+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/weather_data_pipeline.py took 0.173 seconds
+[2025-07-06T18:09:35.892+0000] {processor.py:157} INFO - Started process (PID=725) to work on /opt/airflow/dags/weather_data_pipeline.py
+[2025-07-06T18:09:35.893+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/weather_data_pipeline.py for tasks to queue
+[2025-07-06T18:09:35.893+0000] {logging_mixin.py:151} INFO - [2025-07-06T18:09:35.893+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/weather_data_pipeline.py
+[2025-07-06T18:09:36.045+0000] {processor.py:839} INFO - DAG(s) dict_keys(['weather_data_pipeline']) retrieved from /opt/airflow/dags/weather_data_pipeline.py
+[2025-07-06T18:09:36.057+0000] {logging_mixin.py:151} INFO - [2025-07-06T18:09:36.056+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-07-06T18:09:36.061+0000] {logging_mixin.py:151} INFO - [2025-07-06T18:09:36.061+0000] {dag.py:3696} INFO - Setting next_dagrun for weather_data_pipeline to None, run_after=None
+[2025-07-06T18:09:36.068+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/weather_data_pipeline.py took 0.180 seconds
