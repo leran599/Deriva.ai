@@ -1,7 +1,7 @@
-TASK 1:
-  run & build:
-    docker compose up --build
-trigger the workflow:
+TASK 1: \n
+  run & build: \n
+    docker compose up --build \n
+trigger the workflow: \n
     docker exec task1-airflow-1 airflow dags trigger weather_data_pipeline
     
 TASK 2: 
